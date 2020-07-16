@@ -19,12 +19,12 @@ use Illuminate\Support\Str;
 
 $factory->define(User::class, function (Faker $faker) {
     $users = User::all();
-
+    $email = $faker->unique()->safeEmail;
     foreach ($users as $user){
-        if($user->email == $faker->unique()->safeEmail){
+        if($user->email == $email){
             continue;
         }else{
-            $user_email = $faker->unique()->safeEmail;
+            $user_email = $email;
             return [
                 'first_name' => $faker->firstName,
                 'last_name' => $faker->lastName,
