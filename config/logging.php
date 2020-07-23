@@ -60,6 +60,7 @@ return [
             'username' => 'Laravel Log',
             'emoji' => ':boom:',
             'level' => 'critical',
+//            'channels' => ['single', 'sentry'],
         ],
 
         'papertrail' => [
@@ -99,6 +100,9 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+//        'sentry' => [
+//            'driver' => 'sentry',
+//        ],
     ],
 
 ];

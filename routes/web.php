@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/records', function () {
+    $records = \App\Record::all();
+    return view('records', compact('records'));
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
